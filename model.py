@@ -1,12 +1,3 @@
-"""
-Created on Mar 1, 2020
-Pytorch Implementation of LightGCN in
-Xiangnan He et al. LightGCN: Simplifying and Powering Graph Convolution Network for Recommendation
-
-@author: Jianbai Ye (gusye@mail.ustc.edu.cn)
-
-Define models here
-"""
 from asyncio import base_tasks
 from ctypes import sizeof
 from operator import index
@@ -315,10 +306,6 @@ class GCLRec(nn.Module):
         #batch_iseq_emb=torch.index_select(batch_iseq_emb,0,idx_unsort.to(self.config['device']))
         '''item_logits=self.item_linear(batch_iseq_emb)
         item_logits=torch.mm(item_logits,items.T)'''
-        #item_logits=torch.mm(batch_iseq_emb,self.embedding_item.weight.T)
-        #item_logits=torch.mm(batch_iseq_emb,items.T)
-        #item_logits=self.sigmoid(item_logits)
-        #print("item_logits:{}".format(item_logits))
 
         
 
